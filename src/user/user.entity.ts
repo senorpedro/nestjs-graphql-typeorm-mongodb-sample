@@ -1,7 +1,7 @@
 import { Field, ID, ObjectType } from '@nestjs/graphql';
 import { Column, Entity, ObjectId, ObjectIdColumn } from 'typeorm';
 
-@Entity()
+@Entity('users') // table name different from entity name
 @ObjectType()
 export class User {
   @Field(() => ID) // this is for graphql
