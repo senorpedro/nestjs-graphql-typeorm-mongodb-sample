@@ -11,8 +11,8 @@ export class UserResolver {
     return await 'world';
   }
 
-  @Query((returns) => [User])
-  async users() {
+  @Query((returns) => [User], { name: 'users' })
+  async getUsers() {
     return this.userService.findAll();
   }
 }
